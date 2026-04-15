@@ -61,3 +61,13 @@ TITLE IN ALL CAPS
 - **Date prefix** — always start the filename with TODAY's date (the actual current date when creating the file) in format `DDth-mon-` (e.g., `3rd-mar-`, `21st-jun-`). Never hardcode a date — always check the current date.
 - Use kebab-case for the rest of the filename (e.g., `15th-apr-offload-openclaw-to-local-models.md`)
 - Default location: `/Users/macbookpro/Documents/my-learning/ai-daily-updates/`
+
+## YouTube Transcript Fetching
+If the user provides a YouTube URL without a transcript, auto-fetch it before building the tree:
+```bash
+/Users/macbookpro/Documents/my-learning/.venv/bin/python3 /Users/macbookpro/Documents/my-learning/fetch_transcript.py "<YOUTUBE_URL>"
+```
+- This fetches the full transcript as plain text
+- Use the output as the source content for the ASCII tree
+- If fetching fails, ask the user to paste the transcript manually
+
