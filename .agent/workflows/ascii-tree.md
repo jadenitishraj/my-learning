@@ -58,6 +58,6 @@ TITLE IN ALL CAPS
 ```
 
 ## File Placement
-- **Date prefix** — always start the filename with the current date in format `DDth-mon-` (e.g., `15th-apr-`, `3rd-mar-`, `21st-jun-`)
+- **Date prefix** — always start the filename with TODAY's date (the actual current date when creating the file) in format `DDth-mon-` (e.g., `3rd-mar-`, `21st-jun-`). Never hardcode a date — always check the current date.
 - Use kebab-case for the rest of the filename (e.g., `15th-apr-offload-openclaw-to-local-models.md`)
 - Default location: `/Users/macbookpro/Documents/my-learning/ai-daily-updates/`
