@@ -22,15 +22,13 @@ Sources can include:
 * Blogs / articles
 * Courses
 
-AI-related content is especially encouraged, but not required.
+AI-related content is especially encouraged.
 
 ---
 
 ## 📂 Folder Structure
 
-Each folder represents a domain:
-
-```
+```id="lhu6bb"
 Agentic-development/
 BIA/
 Machine-learning/
@@ -45,13 +43,11 @@ aws-ai-engineer-exam/
 aws-solution-architect/
 ```
 
-Add your ASCII tree to the most relevant folder.
-
 ---
 
 ## 🌳 Example ASCII Tree
 
-```
+```id="9fm6xv"
 Transformers
 ├── Input Processing
 │   ├── Tokenization
@@ -66,9 +62,35 @@ Transformers
 
 ---
 
+## 🧠 How to Use
+
+ASCII trees are not just notes — they are **starting points for thinking and discussion**.
+
+### Basic Flow
+
+1. Pick any tree from the repo
+2. Paste it into a chatbot (like ChatGPT, Claude, etc.)
+3. Ask the model to expand, explain, or critique
+
+Example prompts:
+
+* “Explain each node in detail”
+* “What am I missing here?”
+* “Give real-world examples for each branch”
+* “Turn this into a learning roadmap”
+* “Challenge this structure — what’s wrong?”
+
+This works because:
+
+* The structure gives **context instantly**
+* The model can expand each node intelligently
+* You avoid starting from a blank page
+
+---
+
 ## ⚙️ Script (Optional)
 
-`fetch_transcript.py` can help extract transcripts from YouTube, but usage is optional.
+`fetch_transcript.py` can help extract transcripts from YouTube.
 
 Workflow:
 
@@ -81,7 +103,7 @@ Workflow:
 
 ## 🤝 Contribution Guidelines
 
-1. Pick a **high-value source** (any format)
+1. Pick a **high-value source**
 2. Create a **clean ASCII tree**
 3. Add it to the correct folder
 4. Open a Pull Request
@@ -92,9 +114,7 @@ Workflow:
 * Clear structure
 * Easy to scan
 * No fluff
-* Community validation (reviews / upvotes)
-
-Low-quality or verbose trees will be rejected.
+* Community validation
 
 ---
 
@@ -103,7 +123,7 @@ Low-quality or verbose trees will be rejected.
 * Focus on **20% that matters**
 * Ignore **80% noise**
 * Prefer **structure over summaries**
-* Build a **shared knowledge system**
+* Use trees as **thinking tools**, not just notes
 
 ---
 
@@ -127,6 +147,7 @@ Low-quality or verbose trees will be rejected.
 
 ## ⭐ Contribute
 
-If you find strong ideas — from anywhere — convert them into trees and contribute.
+Find strong ideas. Convert them into trees. Share them.
 
-The value of this repo depends entirely on signal quality.
+The goal is simple: **better starting points for thinking.**
+
