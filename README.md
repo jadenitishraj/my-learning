@@ -1,4 +1,4 @@
-# 📚 ASCII Knowledge Trees — High-Signal Learning
+# 📚 ASCII Knowledge Trees — High-Signal Learning (AI Related News, Updates, Knowledge Sharing)
 
 This repository is built on a simple idea:
 
