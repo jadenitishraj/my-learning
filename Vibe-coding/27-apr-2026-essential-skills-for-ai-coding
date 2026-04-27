@@ -1,0 +1,217 @@
+Youtube Link: https://www.youtube.com/watch?v=-QFHIoCo-Ko
+
+```
+AI CODING WORKFLOW (LLM CONSTRAINTS → IMPLEMENTATION LOOP) 
+|
+|-- Core Thesis
+|   |-- AI is a new paradigm BUT
+|   |   |-- Software engineering fundamentals still apply
+|   |   |-- Human-AI interaction mirrors human-human workflows
+|   |
+|   |-- Key Idea
+|       |-- Structure + decomposition > brute forcing with AI
+|
+|-- LLM Constraints
+|   |-- Smart Zone vs Dumb Zone
+|   |   |-- Smart Zone
+|   |   |   |-- Small context
+|   |   |   |-- Clear attention relationships
+|   |   |   |-- Best reasoning quality
+|   |   |
+|   |   |-- Dumb Zone
+|   |   |   |-- Large context (≈100k+ tokens)
+|   |   |   |-- Degraded reasoning
+|   |   |   |-- Confusion / bad decisions
+|   |   |
+|   |   |-- Cause
+|   |   |   |-- Token relationships scale quadratically
+|   |   |   |-- Attention becomes strained
+|   |   |
+|   |   |-- Implication
+|   |       |-- Keep tasks small
+|   |       |-- Avoid long-running conversations
+|   |
+|   |-- Memory Limitation (Memento Effect)
+|   |   |-- LLM resets each session
+|   |   |-- Context must be rebuilt each time
+|   |
+|   |   |-- Session Phases
+|   |       |-- System prompt (base state)
+|   |       |-- Exploration (codebase scan)
+|   |       |-- Implementation
+|   |       |-- Testing / feedback
+|   |
+|   |-- Context Management
+|       |-- Clear
+|       |   |-- Reset to clean state
+|       |   |-- Most reliable behavior
+|       |
+|       |-- Compact
+|           |-- Summarize history
+|           |-- Risk: loss of fidelity
+|           |-- Author prefers avoiding
+|
+|-- Task Decomposition Strategy
+|   |-- Problem
+|   |   |-- Large tasks exceed smart zone
+|   |
+|   |-- Naive Approach
+|   |   |-- Keep extending conversation
+|   |   |-- Leads to dumb zone
+|   |
+|   |-- Structured Approach
+|       |-- Break into smaller tasks
+|       |-- Execute independently
+|
+|-- Planning Evolution
+|   |-- Multi-phase Plans
+|   |   |-- Phase 1 → Phase N
+|   |   |-- Sequential execution
+|   |   |
+|   |   |-- Limitation
+|   |       |-- Linear
+|   |       |-- Not parallelizable
+|   |
+|   |-- Loop-based Execution (Ralph Pattern)
+|   |   |-- Define end goal (PRD)
+|   |   |-- Iterate:
+|   |       |-- Make small change
+|   |       |-- Move closer to goal
+|
+|-- Alignment Phase (Critical)
+|   |-- Problem
+|   |   |-- AI jumps to solutions too early
+|   |
+|   |-- Solution: "Grill Me" Skill
+|   |   |-- Purpose
+|   |   |   |-- Achieve shared understanding
+|   |   |   |-- Prevent misalignment
+|   |
+|   |   |-- Behavior
+|   |   |   |-- Ask iterative questions
+|   |   |   |-- Provide recommendations
+|   |   |   |-- Resolve ambiguities
+|   |
+|   |   |-- Output
+|   |       |-- Conversation = design asset
+|   |
+|   |-- Key Insight
+|       |-- Goal ≠ plan
+|       |-- Goal = shared design concept
+|
+|-- PRD (Destination Document)
+|   |-- Purpose
+|   |   |-- Define final state
+|   |   |-- Convert conversation → structure
+|   |
+|   |-- Contents
+|   |   |-- Problem statement
+|   |   |-- Solution overview
+|   |   |-- User stories
+|   |   |-- Implementation decisions
+|   |   |-- Testing decisions
+|   |
+|   |-- Properties
+|       |-- Summarization of alignment phase
+|       |-- Not heavily reviewed (LLM strength)
+|
+|-- Task Structuring (Execution Planning)
+|   |-- Kanban Board Model
+|   |   |-- Tasks = nodes
+|   |   |-- Dependencies = edges
+|   |
+|   |-- Task Types
+|   |   |-- Human-in-loop tasks
+|   |   |-- AFK tasks (delegatable)
+|   |
+|   |-- Benefits
+|       |-- Parallel execution
+|       |-- Clear dependencies
+|       |-- Flexible scheduling
+|
+|-- Vertical Slicing (Critical Concept)
+|   |-- Anti-pattern: Horizontal Slices
+|   |   |-- DB layer → API → Frontend
+|   |   |-- No early feedback
+|   |
+|   |-- Solution: Vertical Slices (Tracer Bullets)
+|   |   |-- End-to-end slice
+|   |   |   |-- DB + Service + UI
+|   |
+|   |   |-- Benefits
+|   |       |-- Immediate feedback
+|   |       |-- Integrated testing
+|   |       |-- Reduced risk
+|
+|-- Execution Engine (AFK Loop)
+|   |-- Input
+|   |   |-- PRD
+|   |   |-- Issue backlog
+|   |
+|   |-- Process
+|   |   |-- Select next task
+|   |   |-- Explore codebase
+|   |   |-- Implement (TDD)
+|   |   |-- Run feedback loops
+|   |
+|   |-- Prioritization
+|   |   |-- Bug fixes
+|   |   |-- Infrastructure
+|   |   |-- Core features
+|   |   |-- Polish
+|
+|   |-- Output
+|       |-- Completed tasks
+|       |-- Updated codebase
+|
+|-- Parallelization
+|   |-- Dependency Graph (DAG)
+|   |   |-- Independent tasks run simultaneously
+|   |
+|   |-- Example
+|   |   |-- Task A → Task B & C → Task D
+|   |
+|   |-- Benefit
+|       |-- Faster execution
+|       |-- Better resource utilization
+|
+|-- Human vs AI Responsibilities
+|   |-- Human (Day Shift)
+|   |   |-- Idea definition
+|   |   |-- Alignment (grilling)
+|   |   |-- PRD creation
+|   |   |-- Task structuring
+|   |
+|   |-- AI (Night Shift)
+|       |-- Implementation
+|       |-- Iteration loops
+|       |-- Code generation
+|
+|-- Key Trade-offs
+|   |-- Pros
+|   |   |-- Massive productivity
+|   |   |-- Parallel execution
+|   |
+|   |-- Cons
+|       |-- Increased code review load
+|       |-- Need for strong architecture
+|       |-- Bad codebase → bad results
+|
+|-- Supporting Concepts
+    |-- Sub-agents
+    |   |-- Isolated context workers
+    |   |-- Return summarized results
+    |
+    |-- Token Awareness
+    |   |-- Monitor usage
+    |   |-- Stay within smart zone
+    |
+    |-- Specs-to-Code Critique
+    |   |-- Ignoring code is flawed
+    |   |-- Code remains central artifact
+    |
+    |-- Prototype Usage
+        |-- Especially for frontend
+        |-- Generate options → human select
+...
+```
